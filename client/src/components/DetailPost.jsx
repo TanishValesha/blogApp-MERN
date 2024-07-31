@@ -5,7 +5,7 @@ const DetailPost = () => {
     const [postInfo, setPostInfo] = useState({});
     const {id} = useParams();
     useEffect(() => {
-        fetch(`http://localhost:3000/posts/${id}`).then((response) => {
+        fetch(`https://blogapp-mern-server2.onrender.com/${id}`).then((response) => {
             response.json().then((detailPost) => {
                 setPostInfo(detailPost);
             })
