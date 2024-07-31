@@ -107,4 +107,4 @@ app.post("/logOut", (req, res) => {
   res.cookie("token", "").json("OK");
 });
 
-app.listen(port);
+app.listen(3000);
