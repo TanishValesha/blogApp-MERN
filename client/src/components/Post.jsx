@@ -9,7 +9,7 @@ const Post = ({ title, summary, author, content, cover, id }) => {
           <Link to={`/post/${id}`}>
             <img
               className="rounded"
-              src={"http://localhost:3000/" + cover}
+              src={"https://blogapp-mern-server2.onrender.com/" + cover}
               alt="Image"
             />
           </Link>
