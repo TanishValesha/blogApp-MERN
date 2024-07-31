@@ -13,7 +13,7 @@ const fs = require("fs");
 const seceretKey = "asfsrfeds4gterdtru7tyhukgkjhkjk";
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({ credentials: true, origin: "https://blogapp-mern-frontend.onrender.com" }));
 app.use(cookieParser());
 const port = 3000
 const salt = bcrypt.genSaltSync(10);
