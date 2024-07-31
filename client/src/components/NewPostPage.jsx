@@ -18,7 +18,7 @@ const NewPostPage = () => {
       formData.set('file', files[0])
       e.preventDefault();
       console.log(files)
-      const response = await fetch("http://localhost:3000/posts", {
+      const response = await fetch("https://blogapp-mern-server2.onrender.com/posts", {
         method: 'POST',
         body: formData,
         credentials: 'include'
