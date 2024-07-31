@@ -4,7 +4,7 @@ import Post from './Post'
 const PostPage = () => {
   const[posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:3000/posts').then(response => {
+    fetch('https://blogapp-mern-server2.onrender.com/posts').then(response => {
       response.json().then(posts => {
         setPosts(posts);
         console.log(posts)
