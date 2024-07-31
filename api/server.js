@@ -11,12 +11,12 @@ const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const fs = require("fs");
 const seceretKey = "asfsrfeds4gterdtru7tyhukgkjhkjk";
-
+import 'dotenv/config'
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 app.use(cookieParser());
-
+const port = process.env.PORT
 const salt = bcrypt.genSaltSync(10);
 
 mongoose.connect(
@@ -107,4 +107,4 @@ app.post("/logOut", (req, res) => {
   res.cookie("token", "").json("OK");
 });
 
-app.listen(3000);
+app.listen(port);
