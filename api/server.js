@@ -11,7 +11,7 @@ const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const fs = require("fs");
 const seceretKey = "asfsrfeds4gterdtru7tyhukgkjhkjk";
-import 'dotenv/config'
+require('dotenv/config')
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
