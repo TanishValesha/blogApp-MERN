@@ -14,7 +14,7 @@ const seceretKey = "asfsrfeds4gterdtru7tyhukgkjhkjk";
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(express.json());
 const corsOpts = {
-    origin: '*',
+    origin: 'https://blogapp-mern-frontend.onrender.com/',
     credentials: true,
     methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
     allowedHeaders: ['Content-Type'],
