@@ -13,11 +13,11 @@ const LoginPage = () => {
     const response = await fetch("https://blogapp-mern-server2.onrender.com/login", {
       method: 'POST',
       body: JSON.stringify({userName, password}),
+      credentials: 'include'
       headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json'
         }
-      credentials: 'include'
     })
     if(response.status === 200){
       response.json().then((userInfo) => {
