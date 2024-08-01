@@ -18,6 +18,10 @@ const Header = () => {
     fetch('http://localhost:3000/logOut', {
       credentials: 'include',
       method: 'POST'
+      headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
     })
     setUserInfo(null);
   }
